@@ -1,6 +1,6 @@
 module.exports = {
-	siteName: "Nepal Asset Manager",
-	description: "Use this site to manage and maintain map assets for the Nepal relief response.",
+	siteName: "Disaster Asset Manager",
+	description: "Use this site to manage and maintain map assets for relief responses.",
 	db: "arc_assets",
 	port: 8888,
 	asset_opts: {
