@@ -50,13 +50,6 @@ module.exports = {
 					"VDC",
 					"Web-map"
 				]
-			},
-			"Other": {
-				required: false,
-				values: [
-					"Testing 1",
-					"Testing 2"
-				]
 			}
 		}
 	}
