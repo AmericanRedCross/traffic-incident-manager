@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Disaster Asset Manager
 
 **American Red Cross and Kevin Lustig**
@@ -248,3 +249,7 @@ A Handlebars helper displays the logos in the footer. It scrapes the "client/med
 
 To modify these logos, simply add or remove files from that directory. 
 
+=======
+# traffic-incident-manager
+tool for logging and visualizing road traffic incidents for Kenya Red Cross, Machakos Branch
+>>>>>>> a65dba007a3517956006b5f365020f9d92ca536b
