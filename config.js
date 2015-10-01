@@ -1,6 +1,6 @@
 module.exports = {
-	siteName: "Disaster Asset Manager",
-	description: "Use this site to manage and maintain map assets for relief responses.",
+	siteName: "Traffic Incident Reporter",
+	description: "Use this site to store and maintain data collected by Kenya Red Cross, Machakos branch on traffic incidents.",
 	db: "machakos_incidents",
 	port: 8888,
 	// // if using MapBox tiles also uncomment lines in client/js/assets.js
