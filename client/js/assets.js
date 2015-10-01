@@ -27,13 +27,13 @@ var assetCtrl = {
 			console.log(context);
 		})
 		Handlebars.registerHelper('eq',function(v1,v2,options) {
-			if (v1 && v2 && v1.toString() === v2.toString()) {  
+			if (v1 && v2 && v1.toString() === v2.toString()) {
 				return options.fn(this);
 			}
 			return options.inverse(this);
 		})
 		Handlebars.registerHelper('neq',function(v1,v2,options) {
-			if (v1 && v2 && v1.toString() !== v2.toString()) {  
+			if (v1 && v2 && v1.toString() !== v2.toString()) {
 				return options.fn(this);
 			}
 			return options.inverse(this);
@@ -117,18 +117,19 @@ var assetCtrl = {
 					this.model.coords = coords;
 					this.marker = L.marker(coords)
 				} catch (e) {
-					this.model.coords = new L.LatLng(0,0);
+					this.model.coords = new L.LatLng(localConfig.startingLatLng[0],localConfig.startingLatLng[1]);
 					this.marker = undefined;
 				};
 				this.map = L.map(this.view.map,{
 					center: this.model.coords,
-					zoom: 2
+					zoom: localConfig.startingZoom,
 				})
 				this.marker && (this.marker.addTo(this.map));
-				this.tiles = new L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-				    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-				    id: localConfig.mapboxId,
-				    accessToken: localConfig.mapboxToken
+				this.tiles = new L.tileLayer(localConfig.mapTilesURL, {
+				    attribution: localConfig.mapAttribution,
+						// // if using Mapbox tiles uncomment the following two lines and add the appropriate values to config.js
+				    // id: localConfig.mapboxId,
+				    // accessToken: localConfig.mapboxToken
 				})
 				this.map.addLayer(this.tiles);
 				new L.Control.GeoSearch({
@@ -173,13 +174,13 @@ $(function() {
 				assetCtrl.view.asset.modal = $("#edit-asset-modal");
 				assetCtrl.setModalHandlers();
 			})
-		})		
+		})
 	})
 	assetCtrl.prepTemplates();
 	$(".delete-toggle").click(function() {
 		$("#delete-asset").attr("action","/asset/"+$(this).attr("rel"));
 	})
-	
+
 	$("table").DataTable({
 		"order": [[0,"desc"]],
       "aoColumnDefs": [

@@ -1,54 +1,37 @@
 module.exports = {
 	siteName: "Disaster Asset Manager",
 	description: "Use this site to manage and maintain map assets for relief responses.",
-	db: "arc_assets",
+	db: "machakos_incidents",
 	port: 8888,
-	mapboxId: "kevinlustig.n0dmkkj4",
-	mapboxToken: "pk.eyJ1Ijoia2V2aW5sdXN0aWciLCJhIjoiNDgzNDhhNzRhMzRhN2FlOGEzZDkzOWNkMDcyMDIzMzIifQ.2fQQqIf5HJsjHjMPsvNTOQ",
+	// // if using MapBox tiles also uncomment lines in client/js/assets.js
+	// mapTilesURL: 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}',
+	// mapboxId: "kevinlustig.n0dmkkj4",
+	// mapboxToken: "pk.eyJ1Ijoia2V2aW5sdXN0aWciLCJhIjoiNDgzNDhhNzRhMzRhN2FlOGEzZDkzOWNkMDcyMDIzMzIifQ.2fQQqIf5HJsjHjMPsvNTOQ",
+	// mapAttribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+  //  // if using an open tile server
+	mapTilesURL: "http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
+	mapAttribution: 'Map data &copy; <a href="http://openstreetmap.org" target="_blank">OpenStreetMap</a> | Map style by <a href="http://hot.openstreetmap.org" target="_blank">H.O.T.</a>',
+	startingLatLng: [-1.5264, 37.2721],
+	startingZoom: 13,
 	asset_opts: {
 		geolocation: true,
 		types: [
-			"Map",
-			"Web Map",
-			"Infographic",
-			"Situation Report"
+			"typeI",
+			"typeII",
+			"typeIII",
+			"typeIV"
 		],
 		tags: {
-			"Extent": {
+			"tag01": {
 				required: false,
 				values: [
-					"Arghakhanchi",	"Bagmati",	"Bara",	"Bhaktapur",	"Chitawan",	"Dhading",	"Dhanusa",	"Dhaualagiri",	"Dolakha",	"Gandaki",	"Ghorkha",	"Gulmi",	"Janakpur",	"Kapilbastu",	"Kaski",	"Kathmandu",	"Kavrepalanchok",	"Koshi",	"Lalitpur",	"Lamjung",	"Lumbini",	"Mahottari",	"Makwanpur",	"Manang",	"Mechi",	"Narayani",	"Nawalparasi",	"Nepal",	"Nuwakot",	"Okhaldhunga",	"Palpa",	"Parsa",	"Ramechhap",	"Rapti",	"Rasuwa",	"Rautahat",	"Rupandehi",	"Sagarmatha",	"Sarlahi",	"Sindhuli",	"Sindhupalchok",	"Syangja",	"Tanahu",	"World"
+					"tag01A",	"tag01B",	"tag01C",	"tag01D"
 				]
 			},
-			"Sector": {
+			"tag02": {
 				required: true,
 				values: [
-					"3W",
-					"Accessibility",
-					"Admin-boundaries",
-					"Affected",
-					"Allocation",
-					"AmericanRedCross",
-					"Atlas-map",
-					"Baseline",
-					"Coordination",
-					"Damage",
-					"Distributions",
-					"Earthquake",
-					"Health",
-					"Hillshade",
-					"Hubs",
-					"IDP-Camps",
-					"IRA",
-					"Logistics",
-					"NRCS",
-					"Population",
-					"Priority",
-					"RedCrossRedCrescent",
-					"Roads",
-					"Shelter",
-					"VDC",
-					"Web-map"
+					"tag02A",	"tag02B",	"tag02C",	"tag02D"
 				]
 			}
 		}
