@@ -15,13 +15,13 @@
 <nav class="navbar row">
 	<ul class="nav navbar-nav">
 		<li>
-			<a href="#" id="add-toggle" data-toggle="modal" data-target="#add-asset-modal"><b class="glyphicon glyphicon-plus"></b> Create Asset</a>
+			<a href="#" id="add-toggle" data-toggle="modal" data-target="#add-asset-modal"><b class="glyphicon glyphicon-plus"></b> Create Report</a>
 		</li>
 		<li>
-			<a href="#" id="import-toggle" data-toggle="modal" data-target="#import-asset-modal"><b class="glyphicon glyphicon-open"></b> Import Assets</a>
+			<a href="#" id="import-toggle" data-toggle="modal" data-target="#import-asset-modal"><b class="glyphicon glyphicon-open"></b> Import Reports</a>
 		</li>
 		<li>
-			<a href="/assets/export" target="_blank" id="export-toggle"><b class="glyphicon glyphicon-save"></b> Export Assets</a>
+			<a href="/assets/export" target="_blank" id="export-toggle"><b class="glyphicon glyphicon-save"></b> Export Reports</a>
 		</li>
 	</ul>
 </nav>
@@ -74,10 +74,10 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						Delete Asset
+						Delete Report
 					</div>
 					<div class="modal-body">
-						<p>Are you sure you want to delete this asset?</p>
+						<p>Are you sure you want to delete this report?</p>
 						<p><strong>This action cannot be undone.</strong></p>
 					</div>
 					<div class="modal-footer">
@@ -96,7 +96,7 @@
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h4 class="modal-title">Edit Asset</h4>
+						<h4 class="modal-title">Edit Report</h4>
 					</div>
 					<form action="/asset" method="POST" id="edit-asset" enctype="multipart/form-data" >
 						<input type="hidden" name="_method" value="PUT">
@@ -116,7 +116,7 @@
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h4 class="modal-title">Create Asset</h4>
+						<h4 class="modal-title">Create Report</h4>
 					</div>
 					<form action="/asset" method="POST" id="add-asset" enctype="multipart/form-data" >
 						<div class="modal-body">
@@ -135,7 +135,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h4 class="modal-title">Import Assets</h4>
+						<h4 class="modal-title">Import Reports</h4>
 					</div>
 					<form action="/assets/import" method="POST" id="import-asset" enctype="multipart/form-data">
 						<div class="modal-body">
